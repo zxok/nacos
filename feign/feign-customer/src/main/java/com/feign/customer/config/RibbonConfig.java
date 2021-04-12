@@ -1,4 +1,4 @@
-package com.dubbo.customer.config;
+package com.feign.customer.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.WeightedResponseTimeRule;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @program: dubbo-customer
+ * @program: feign-customer
  * @author: hzx
  * @since: JDK 1.8
  * @create: 2021-04-12 11:00

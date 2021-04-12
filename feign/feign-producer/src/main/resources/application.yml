@@ -3,12 +3,10 @@
 
 spring:
   application:
-    name: nacos-01
+    name: feign-producer
   cloud:
     nacos:
       discovery:
-        #server-addr: 10.135.16.145:8848
         #server-addr: localhost:8848
         server-addr: 101.37.159.158:8848
-        namespace: public
-
+        namespace: feign
