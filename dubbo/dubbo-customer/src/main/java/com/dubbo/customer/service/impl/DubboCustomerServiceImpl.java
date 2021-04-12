@@ -5,6 +5,8 @@ import com.dubbo.producer.service.IDubboProducerService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @program: nacos
  * @author: hzx
@@ -27,5 +29,8 @@ public class DubboCustomerServiceImpl implements IDubboCustomerService {
         return "dubbo-customer  >>>  "+dubboProducerService.producerTest();
     }
 
-
+    @Override
+    public String ribbonTest() {
+        return "dubbo-customer  >>>  \n"+dubboProducerService.ribbonTest();
+    }
 }

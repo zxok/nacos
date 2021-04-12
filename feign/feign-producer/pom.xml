@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hzx</groupId>
-        <artifactId>dubbo</artifactId>
+        <artifactId>feign</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.hzx</groupId>
-    <artifactId>dubbo-customer</artifactId>
+    <artifactId>feign-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dubbo-customer</name>
+    <name>feign-producer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,21 +24,14 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!-- dubbo 集成spring cloud -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
-        </dependency>
-        <!-- 负载均衡 -->
+        <!-- 远程通信 feigin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!-- 生产者 -->
         <dependency>
-            <groupId>com.hzx</groupId>
-            <artifactId>dubbo-producer</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
         </dependency>
     </dependencies>
 

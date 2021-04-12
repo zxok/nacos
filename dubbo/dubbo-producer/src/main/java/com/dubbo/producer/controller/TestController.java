@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @program: nacos
@@ -22,5 +23,10 @@ public class TestController {
     @GetMapping("test")
     public String test() {
         return dubboProducerService.producerTest();
+    }
+
+    @GetMapping("serviceInfo")
+    public String serviceInfo() {
+        return dubboProducerService.ribbonTest();
     }
 }
