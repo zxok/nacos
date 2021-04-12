@@ -1,0 +1,20 @@
+#server:
+  #port: 8089
+
+spring:
+  application:
+    name: nacos-01
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: 10.135.16.145:8848
+        #server-addr: localhost:8848
+        server-addr: 101.37.159.158:8848
+        namespace: public
+
+#负载均衡配置 -- 服务端不涉及远程通讯不需要配置
+feign:
+  #使用OkHttp作为底层通讯框架
+  okhttp:
+    enabled: true
+

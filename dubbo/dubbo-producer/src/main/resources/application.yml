@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: dubbo-producer
+  cloud:
+    nacos:
+      discovery:
+        namespace: dubbo
+        server-addr: 101.37.159.158:8848
+
+# 提供者的配置信息
+dubbo:
+  scan:
+    # 扫描暴露接口的包 多个使用,隔开
+    base-packages: com.dubbo.producer.service.impl
+    # 协议部分的配置
+  protocol:
+    name: dubbo
+    #  表示自增扫描  从开始20880
+    port: -1
+  registry:
+    address: nacos://101.37.159.158:8848
+    #address: zookeeper://
+    # 分布式
